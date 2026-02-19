@@ -168,9 +168,18 @@
 <footer class="site-footer">
     <div class="container footer-content">
         <p>منصة طباخين – مشروع ناشئ من السعودية لربط الأسر المنتجة بالعملاء.</p>
-        <p>للتواصل: support@example.com</p>
+        <p>للتواصل: <a class="support-email"></a></p>
         <p>© 2026 Tabbakheen. جميع الحقوق محفوظة.</p>
     </div>
 </footer>
+<script>
+const SUPPORT_EMAIL = "tabbakheen@gmail.com";
+document.querySelectorAll(".support-email").forEach(el => {
+  el.textContent = SUPPORT_EMAIL;
+  if (el.tagName === "A") {
+    el.href = "mailto:" + SUPPORT_EMAIL;
+  }
+});
+</script>
 </body>
 </html>
