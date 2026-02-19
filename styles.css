@@ -44,6 +44,14 @@ a {
     gap: 8px;
 }
 
+.nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo-image {
     width: 40px;
     height: 40px;
@@ -51,10 +59,21 @@ a {
     object-fit: cover;
 }
 
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .logo-text {
     font-weight: 700;
     font-size: 20px;
     color: #f97316;
+}
+
+.nav-brand-text {
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .main-nav {
@@ -337,4 +356,3 @@ a {
         background-position: center top;
     }
 }
-
