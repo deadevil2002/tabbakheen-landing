@@ -180,6 +180,13 @@ a {
     color: #111827;
 }
 
+.section-subtitle {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 24px;
+    max-width: 640px;
+}
+
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -213,6 +220,51 @@ a {
 .card-link {
     display: block;
     border: 1px solid #e5e7eb;
+}
+
+.city-card {
+    position: relative;
+}
+
+.card-cta {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #f97316;
+}
+
+.about-content p {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.about-feature-item {
+    background: #fff7ed;
+    border-radius: 12px;
+    padding: 14px 16px;
+    border-right: 4px solid #f97316;
+}
+
+.about-feature-item strong {
+    display: block;
+    font-size: 15px;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.about-feature-item span {
+    font-size: 13px;
+    color: #4b5563;
 }
 
 .two-column {
@@ -304,7 +356,25 @@ a {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 4px 0;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #f97316;
 }
 
 @media (min-width: 768px) {
@@ -331,6 +401,18 @@ a {
 
     .cards-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .city-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .city-features-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .about-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .faq-list {
