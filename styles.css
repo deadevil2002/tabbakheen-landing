@@ -126,11 +126,66 @@ a {
     max-width: 520px;
 }
 
+.hero-text .hero-coverage {
+    margin-bottom: 8px;
+    color: #ffedd5;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.hero-text .hero-summary {
+    line-height: 1.8;
+}
+
+.hero-text .hero-country-list {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
 .hero-actions {
-    margin-top: 20px;
+    margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.store-badges {
+    display: flex;
     gap: 12px;
+    flex-wrap: wrap;
+}
+
+.store-badges.justify-center {
+    justify-content: center;
+}
+
+.store-badge {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.store-badge img {
+    display: block;
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.store-badge:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.store-badge:focus-visible {
+    outline: 3px solid #fdba74;
+    outline-offset: 4px;
+    border-radius: 8px;
 }
 
 .btn {
@@ -178,6 +233,31 @@ a {
     font-size: 22px;
     margin-bottom: 24px;
     color: #111827;
+}
+
+.section-cta {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #ffffff;
+    text-align: center;
+    padding: 64px 20px;
+    margin-top: 40px;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-text h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #f97316;
+}
+
+.cta-text p {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 32px;
 }
 
 .section-subtitle {
@@ -377,6 +457,19 @@ a {
     color: #f97316;
 }
 
+.footer-store-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.store-badge-compact img {
+    height: 36px;
+}
+
 @media (min-width: 768px) {
     .hero-content {
         flex-direction: row;
@@ -434,7 +527,51 @@ a {
         font-size: 22px;
     }
 
+    .hero-text .hero-coverage {
+        font-size: 17px;
+    }
+
+    .hero-text .hero-country-list {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
     .hero-section {
         background-position: center top;
+    }
+
+    .hero-actions,
+    .store-badges {
+        justify-content: center;
+    }
+
+    .store-badge img {
+        height: 40px;
+    }
+
+    .store-badge-compact img {
+        height: 32px;
+    }
+
+    .section-cta {
+        padding: 48px 16px;
+    }
+
+    .cta-text h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 359px) {
+    .store-badges {
+        gap: 8px;
+    }
+
+    .store-badge img {
+        height: 36px;
+    }
+
+    .store-badge-compact img {
+        height: 30px;
     }
 }
