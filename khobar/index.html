@@ -49,21 +49,24 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى</a>
 <header class="site-header">
     <div class="container header-content">
         <a href="/" class="nav-brand logo-area">
             <img src="/assets/logo.png" alt="شعار طباخين" class="nav-logo-img logo-image">
             <span class="nav-brand-text logo-text">طباخين</span>
         </a>
-        <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="فتح قائمة التنقل"><span></span><span></span><span></span></button>
+        <nav id="main-navigation" class="main-nav" aria-label="التنقل الرئيسي">
             <a href="/">الرئيسية</a>
             <a href="/dammam/">الدمام</a>
             <a href="/khobar/">الخبر</a>
             <a href="/jubail/">الجبيل</a>
         </nav>
+        <a class="btn btn-primary header-cta" href="#download-app">حمّل التطبيق</a>
     </div>
 </header>
-<main>
+<main id="main-content">
     <section class="hero-section city-hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
@@ -71,7 +74,7 @@
                 <h1>اكل بيتي في الخبر – وجبات منزلية طازجة من الأسر المنتجة</h1>
                 <p>اكتشف أشهى الأطباق المنزلية في الخبر مع طباخين. اطلب اكل بيتي من أسر منتجة موثوقة في الخبر واستمتع بطبخ بيت أصيل يوصلك طازج. من الأطباق السعودية التقليدية إلى الوجبات العصرية، كلها بنكهة البيت.</p>
                 <div class="hero-actions">
-                    <div class="store-badges" role="group" aria-label="روابط تحميل تطبيق طباخين">
+                    <div id="download-app" class="store-badges" role="group" aria-label="روابط تحميل تطبيق طباخين">
                         <a href="https://apps.apple.com/app/tabbakheen/id6777899848" target="_blank" rel="noopener noreferrer" class="store-badge">
                             <img src="/assets/app-store-badge-ar.svg" alt="حمّل تطبيق طباخين من App Store">
                         </a>
@@ -152,5 +155,6 @@
         <p>© 2026 Tabbakheen. جميع الحقوق محفوظة.</p>
     </div>
 </footer>
+<script>const b=document.querySelector('.menu-toggle'),n=document.querySelector('.main-nav');if(b&&n){const c=()=>{b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','فتح قائمة التنقل');n.classList.remove('is-open');document.body.classList.remove('menu-open')};b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'فتح قائمة التنقل':'إغلاق قائمة التنقل');n.classList.toggle('is-open',!o);document.body.classList.toggle('menu-open',!o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape'){c();b.focus()}})}</script>
 </body>
 </html>
